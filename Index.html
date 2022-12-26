@@ -4,12 +4,12 @@
 <head>
     <title>01057057-01057030-Final Project</title>
 </head>
-<link rel="stylesheet" href="todo.css">
-<link rel="stylesheet" href="alarm.css">
+<link rel="stylesheet" href="todo.css">//TODOLIST CSS
+<link rel="stylesheet" href="alarm.css">//TIMER CSS
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Gamja+Flower&display=swap');
 </style>
-<style>
+<style> // DOWNLOAD PPT CSS
     .download {
         display: flex;
         float: right;
@@ -40,12 +40,12 @@
     <header>
         <div>
             <label class="web">Study Timer<label class="download"><a href="PPT.pptx"download="01057057-01057030-Final.pptx"><img src="download.svg"></a></label></label></div>
-        <label class="switch">
+        <label class="switch">  //CHECKBOX SWITCH ON OFF FOR DARK AND LIGHT MODE
             <input id="darkToggle" type="checkbox" class="darkToggle">
             <span for="darkToggle" class="slider round"></span>
         </label>
     </header>
-    <button id="myBtn">POPUP</button>
+    <button id="myBtn">POPUP</button> //POPUP ALERT HIDDEN BUTTON
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -68,18 +68,18 @@
         <button onclick="countInterval.reseteCount()">Reset</button>
     </div>
     <div class="center">
-        <div class="container">
+        <div class="container"> //TODOLIST INPUT AND BUTTON
             <div class="newtask" id="newtask">
                 <form id="todo-form">
                     <input type="text" id="todo-input" placeholder="Add Tasks" maxlength="30">
                     <button type="submit"><img src="plus.svg"></button>
                 </form>
             </div>
-            <label class="count" id="counter"></label>
-            <div id="todo-list"></div>
+            <label class="count" id="counter"></label> // COUNT MAXLENGTH INPUT
+            <div id="todo-list"></div> //PLACE FOR APPENDCHILD INPUT LI
         </div>
     </div>
-    <audio id="myAudio">
+    <audio id="myAudio"> // AUDIO EVERY 00.00 OR TIMER DONE
         <source src="Alarm.wav" type="audio/wav">
     </audio>
 </body>
