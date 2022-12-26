@@ -9,9 +9,37 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Gamja+Flower&display=swap');
 </style>
+<style>
+    .download {
+        display: flex;
+        float: right;
+        padding-top: 3px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border: 1px solid white;
+        border-radius: 100px;
+        background-color: rgb(70, 69, 69);
+    }
+
+    .download:hover {
+        background-color: rgb(170, 181, 185);
+        outline: none;
+        border: 1px solid red;
+    }
+
+    .web {
+        font-size: 25px;
+        margin-right: 20px;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
 <body>
     <header>
-        <label class="web">Study Timer</label>
+        <div>
+            <label class="web">Study Timer<label class="download"><a href="PPT.pptx"download="01057057-01057030-Final.pptx"><img src="download.svg"></a></label></label></div>
         <label class="switch">
             <input id="darkToggle" type="checkbox" class="darkToggle">
             <span for="darkToggle" class="slider round"></span>
@@ -57,4 +85,5 @@
 </body>
 <script src="todo.js"></script>
 <script src="alarm.js"></script>
+
 </html>
