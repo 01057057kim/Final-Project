@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>01057057-01057030-Final Project</title>
+</head>
+<link rel="stylesheet" href="todo.css">
+<link rel="stylesheet" href="alarm.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300&family=Gamja+Flower&display=swap');
+</style>
+<body>
+    <header>
+        <label class="web">Study Timer</label>
+        <label class="switch">
+            <input id="darkToggle" type="checkbox" class="darkToggle">
+            <span for="darkToggle" class="slider round"></span>
+        </label>
+    </header>
+    <button id="myBtn">POPUP</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please Add Task</p>
+        </div>
+    </div>
+    <div class="timer-up">
+        <button onclick="countInterval.fiveCount()">5 Minute</button>
+        <button onclick="countInterval.fiveteenCount()">15 Minute </button>
+    </div>
+    <div class="timer-text">
+        <div id="min">25</div>
+        <div>:</div>
+        <div id="sec">00</div>
+    </div>
+    <div class="timer-down ">
+        <button onclick="countInterval.startCount()">Start</button>
+        <button onclick="countInterval.stopCount()">Pause</button>
+        <button onclick="countInterval.resetCount()">Next</button>
+        <button onclick="countInterval.reseteCount()">Reset</button>
+    </div>
+    <div class="center">
+        <div class="container">
+            <div class="newtask" id="newtask">
+                <form id="todo-form">
+                    <input type="text" id="todo-input" placeholder="Add Tasks" maxlength="30">
+                    <button type="submit"><img src="plus.svg"></button>
+                </form>
+            </div>
+            <label class="count" id="counter"></label>
+            <div id="todo-list"></div>
+        </div>
+    </div>
+    <audio id="myAudio">
+        <source src="Alarm.wav" type="audio/wav">
+    </audio>
+</body>
+<script src="todo.js"></script>
+<script src="alarm.js"></script>
+</html>

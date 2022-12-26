@@ -1,0 +1,214 @@
+* {
+    font-family: 'Gamja Flower', cursive;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.web {
+    font-size: 25px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .5s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #000000;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 3px white;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.timer-up {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.timer-up button {
+    font-size: 16px;
+    border: none;
+    margin: 5px;
+    background-color: transparent;
+    z-index: 1;
+    border-radius: 20px;
+    padding: 2px 10px;
+    border: 1px solid black;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.timer-down button {
+    font-size: 16px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 2px 10px;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+.timer-down button:hover {
+    cursor: pointer;
+    background-color: rgb(170, 181, 185);
+    outline: none;
+    border: 2px solid #0d75ec;
+}
+
+.timer-up button:hover {
+    cursor: pointer;
+    background-color: rgb(170, 181, 185);
+    outline: none;
+    border: 2px solid #0d75ec;
+}
+
+.timer-break {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: -10px;
+}
+
+.timer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#min {
+    padding: 2px 10px;
+}
+
+#sec {
+    padding: 2px 10px;
+}
+
+.timer-down {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin-bottom: -10px
+}
+
+.timer-text div {
+    height: 220px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 20%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #333;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    height: 65px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
+    display: none;
+}

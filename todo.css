@@ -1,0 +1,219 @@
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    /* background-image: url("Back-2.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+/* background-color: white; */
+
+
+.center {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background: transparent;
+    border-radius: 10px;
+    min-width: 467px;
+    position: absolute;
+    min-height: 100px;
+}
+
+#newtask {
+    position: relative;
+    padding: 30px 20px;
+}
+
+#newtask input {
+    width: 80%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+    background-color: #dddddd;
+}
+
+#todo-list {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: 2px 20px;
+    height: 50px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+form {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+.todo {
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+    padding: 2px 20px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.todo-controls {
+    border-radius: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #333;
+    height: 50px;
+    margin-bottom: -10px;
+    padding: 5px 10px;
+    display: flex;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+/* delete button inside */
+.todo-delete {
+    flex: right;
+    margin-left: 8px;
+    font-size: 14px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+}
+
+input[type="text"] {
+    font-size: 16px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+button[type="submit"] {
+    font-size: 16px;
+    padding: 1px 8px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: lightblue;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+/* count input */
+.count {
+    float: left;
+    margin-left: 50px;
+    z-index: 1;
+    border: none;
+    background-color: transparent;
+    padding: 0px 2px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+/* check list checked */
+.todo.completed .todo-text {
+    text-decoration: line-through;
+}
+
+.todo.completed {
+    color: black;
+}
+
+/* input and button */
+#newtask input:focus {
+    outline: none;
+    border-color: #0d75ec;
+}
+
+#newtask input:hover {
+    outline: none;
+    border-color: #0d75ec;
+}
+
+#newtask button:hover {
+    cursor: pointer;
+    background-color: rgb(133, 167, 179);
+    outline: none;
+    border: 2px solid #ec0d0d;
+}
+.todo-controls{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+/* inside list button */
+.todo-controls button:focus {
+    outline: none;
+    border-color: #0d75ec;
+    
+}
+
+.todo-controls button:hover {
+    outline: none;
+    background-color: darkred;
+}
+
+/* list */
+.todo-controls:hover {
+    outline: none;
+    border: 2px solid #0d75ec;
+}
+
+.todo-controls:focus {
+    outline: none;
+    border: 2px solid #0d75ec;
+
+}
+.todo-text{
+    margin-left: 10px
+}
+.todo-checkbox {
+    transform: scale(1.8);
+    margin: 10px 2px;
+}
+.darkToggle {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 5px;
+    border: 2px solid #555;
+}
+
+.darkToggle:checked {
+    background: #333;
+}
+
+.dark {
+    color: white;
+    background: #444;
+}
