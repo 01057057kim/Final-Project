@@ -113,41 +113,41 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
-
+// LIGHT AND DARKMODE CSS CHANGE
 var temp = 0
-    let darkToggle = document.querySelector('#darkToggle');
-    darkToggle.addEventListener('click', () => {
-        if (temp == 0) { //DARK
-            document.body.classList.toggle('dark');
-            document.querySelectorAll('.timer-down > button').forEach(button => {
-                button.style.color = 'white';
-            });
-            document.querySelectorAll('.timer-up > button').forEach(button => {
-                button.style.color = 'white';
-            });
-            document.querySelectorAll('.todo-controls').forEach(element => {
-                element.style['background-color'] = 'white';
-                element.style['color'] = 'black';
-            });
-            document.querySelector("header").style['background-color'] = "#1c1c1c";
-            document.querySelector(".modal-content").style['background-color'] = "white";
-            document.querySelector(".modal-content").style['color'] = "black";
-            temp = 1
-        } else { //LIGHT
-            document.body.classList.toggle('dark');
-            document.querySelectorAll('.timer-down > button').forEach(button => {
-                button.style.color = 'black';
-            });
-            document.querySelectorAll('.timer-up > button').forEach(button => {
-                button.style.color = 'black';
-            });
-            document.querySelectorAll('.todo-controls').forEach(element => {
-                element.style['background-color'] = '#333';
-                element.style['color'] = 'white';
-            });
-            document.querySelector("header").style['background-color'] = "#333";
-            document.querySelector(".modal-content").style['background-color'] = "#333";
-            document.querySelector(".modal-content").style['color'] = "white";
-            temp = 0
-        }
-    })
+let darkToggle = document.querySelector('#darkToggle');
+darkToggle.addEventListener('click', () => {
+    if (temp == 0) { //DARK
+        document.body.classList.toggle('dark');
+        document.querySelectorAll('.timer-down > button').forEach(button => {
+            button.style.color = 'white';
+        });
+        document.querySelectorAll('.timer-up > button').forEach(button => {
+            button.style.color = 'white';
+        });
+        document.querySelectorAll('.todo-controls').forEach(element => {
+            element.style['background-color'] = 'white';
+            element.style['color'] = 'black';
+        });
+        document.querySelector("header").style['background-color'] = "#1c1c1c";
+        document.querySelector(".modal-content").style['background-color'] = "white";
+        document.querySelector(".modal-content").style['color'] = "black";
+        temp = 1
+    } else { //LIGHT
+        document.body.classList.toggle('dark');
+        document.querySelectorAll('.timer-down > button').forEach(button => {
+            button.style.color = 'black';
+        });
+        document.querySelectorAll('.timer-up > button').forEach(button => {
+            button.style.color = 'black';
+        });
+        document.querySelectorAll('.todo-controls').forEach(element => {
+            element.style['background-color'] = '#333';
+            element.style['color'] = 'white';
+        });
+        document.querySelector("header").style['background-color'] = "#333";
+        document.querySelector(".modal-content").style['background-color'] = "#333";
+        document.querySelector(".modal-content").style['color'] = "white";
+        temp = 0
+    }
+})
