@@ -20,17 +20,21 @@ let countInterval = (function () {
             intervalid = null;
             document.getElementById('myAudio').play()
             round++;
-            if ((round % 6) == 0)
+            if ((round % 8) == 0)
                 seconds = 1500;
-            if ((round % 6) == 1)
+            if ((round % 8) == 1)
                 seconds = 300;
-            if ((round % 6) == 2)
+            if ((round % 8) == 2)
                 seconds = 1500;
-            if ((round % 6) == 3)
+            if ((round % 8) == 3)
                 seconds = 300;
-            if ((round % 6) == 4)
+            if ((round % 8) == 4)
                 seconds = 1500;
-            if ((round % 6) == 5)
+            if ((round % 8) == 5)
+                seconds = 300;
+            if ((round % 8) == 6)
+                seconds = 1500;
+            if ((round % 8) == 7)
                 seconds = 900;
             if ((parseInt(seconds / 60)) < 10) {
                 document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
@@ -59,23 +63,25 @@ let countInterval = (function () {
     }
 
     function five() {
-        round = 1;
-        if ((round % 6) == 1)
-            seconds = 300;
-        if ((parseInt(seconds / 60)) < 10)
-            document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
-        else
-            document.getElementById("min").innerHTML = parseInt(seconds / 60);
-        if ((seconds % 60) < 10)
-            document.getElementById("sec").innerHTML = "0" + parseInt(seconds % 60);
-        else
-            document.getElementById("sec").innerHTML = parseInt(seconds % 60);
+        round = -1;
         stop();
-    }
-
-    function fiveteen() {
-        round = 1;
-        if ((round % 6) == 1)
+        if ((round % 9) == -1)
+            seconds = 300;
+        if ((round % 9) == 0)
+            seconds = 1500;
+        if ((round % 9) == 1)
+            seconds = 300;
+        if ((round % 9) == 2)
+            seconds = 1500;
+        if ((round % 9) == 3)
+            seconds = 300;
+        if ((round % 9) == 4)
+            seconds = 1500;
+        if ((round % 9) == 5)
+            seconds = 300;
+        if ((round % 9) == 6)
+            seconds = 1500;
+        if ((round % 9) == 7)
             seconds = 900;
         if ((parseInt(seconds / 60)) < 10)
             document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
@@ -85,23 +91,57 @@ let countInterval = (function () {
             document.getElementById("sec").innerHTML = "0" + parseInt(seconds % 60);
         else
             document.getElementById("sec").innerHTML = parseInt(seconds % 60);
+    }
+
+    function fiveteen() {
+        round = -1;
         stop();
+        if ((round % 9) == -1)
+            seconds = 900;
+        if ((round % 9) == 0)
+            seconds = 1500;
+        if ((round % 9) == 1)
+            seconds = 300;
+        if ((round % 9) == 2)
+            seconds = 1500;
+        if ((round % 9) == 3)
+            seconds = 300;
+        if ((round % 9) == 4)
+            seconds = 1500;
+        if ((round % 9) == 5)
+            seconds = 300;
+        if ((round % 9) == 6)
+            seconds = 1500;
+        if ((round % 9) == 7)
+            seconds = 900;
+        if ((parseInt(seconds / 60)) < 10)
+            document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
+        else
+            document.getElementById("min").innerHTML = parseInt(seconds / 60);
+        if ((seconds % 60) < 10)
+            document.getElementById("sec").innerHTML = "0" + parseInt(seconds % 60);
+        else
+            document.getElementById("sec").innerHTML = parseInt(seconds % 60);
     }
 
     function resete() {
         round = 0;
         stop();
-        if ((round % 6) == 0)
+        if ((round % 8) == 0)
             seconds = 1500;
-        if ((round % 6) == 1)
+        if ((round % 8) == 1)
             seconds = 300;
-        if ((round % 6) == 2)
+        if ((round % 8) == 2)
             seconds = 1500;
-        if ((round % 6) == 3)
+        if ((round % 8) == 3)
             seconds = 300;
-        if ((round % 6) == 4)
+        if ((round % 8) == 4)
             seconds = 1500;
-        if ((round % 6) == 5)
+        if ((round % 8) == 5)
+            seconds = 300;
+        if ((round % 8) == 6)
+            seconds = 1500;
+        if ((round % 8) == 7)
             seconds = 900;
         if ((parseInt(seconds / 60)) < 10)
             document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
@@ -116,17 +156,21 @@ let countInterval = (function () {
     function reset() {
         round++;
         stop();
-        if ((round % 6) == 0)
+        if ((round % 8) == 0)
             seconds = 1500;
-        if ((round % 6) == 1)
+        if ((round % 8) == 1)
             seconds = 300;
-        if ((round % 6) == 2)
+        if ((round % 8) == 2)
             seconds = 1500;
-        if ((round % 6) == 3)
+        if ((round % 8) == 3)
             seconds = 300;
-        if ((round % 6) == 4)
+        if ((round % 8) == 4)
             seconds = 1500;
-        if ((round % 6) == 5)
+        if ((round % 8) == 5)
+            seconds = 300;
+        if ((round % 8) == 6)
+            seconds = 1500;
+        if ((round % 8) == 7)
             seconds = 900;
         if ((parseInt(seconds / 60)) < 10)
             document.getElementById("min").innerHTML = "0" + parseInt(seconds / 60);
