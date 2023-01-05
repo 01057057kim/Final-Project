@@ -54,12 +54,19 @@ http.createServer((req, res) => {
             res.setHeader('Content-Type', 'image/svg+xml');
             res.end(data);
         });
-    }else if (req.url === '/FINAL.pptx') {
+    } else if (req.url === '/FINAL.pptx') {
         fs.readFile('FINAL.pptx', (err, data) => {
             if (err) throw err;
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.presentationml.presentation');
             res.setHeader('Content-Disposition', 'attachment; filename=01057057-01057030-Final.pptx');
+            res.end(data);
+        });
+    } else if (req.url === '/Alarm.wav') {
+        fs.readFile('Alarm.wav', (err, data) => {
+            if (err) throw err;
+            res.statusCode = 200;
+            res.setHeader('Content-Type', 'audio/wav');
             res.end(data);
         });
     }else {
